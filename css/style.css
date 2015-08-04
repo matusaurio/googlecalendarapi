@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Oswald|Montserrat);
+
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    color: #FFF;
+    background-image: url("http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-56248.jpg");
+}
+
+.footer {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.credit {
+    text-align: center;
+    margin: 20px 0;
+}

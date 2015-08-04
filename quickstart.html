@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Calendar API</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/googlecalendar.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+</head>
+<body>
+<div class="page-header">
+    <h1>
+        <img src="https://www.gstatic.com/images/icons/material/product/2x/calendar_64dp.png" alt="Google Calendar API">
+        Google Calendar API
+    </h1>
+</div>
+
+
+<div id="authorize-div" style="display: none">
+    <span>Authorize access to Google Calendar API</span>
+    <!--Button for the user to click to initiate auth sequence -->
+    <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+    </button>
+</div>
+<div class="container">
+    <pre id="output" hidden></pre>
+</div>
+<div class="container tablaeventos">
+    <h3>Eventos Próximos</h3>
+    <table class="table" id="eventos">
+        <thead>
+        <tr>
+            <th>Resumen</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h3>Insertar Evento</h3>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="summary" class="control-label col-sm-1">Resumen:</label>
+
+            <div class="col-sm-4">
+                <input type="text" id="summary" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="start" class="control-label col-sm-1"> Inicio:</label>
+
+            <div class="col-sm-3">
+                <input type="date" id="start" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="end" class="control-label col-sm-1">Fin:</label>
+
+            <div class="col-sm-3">
+                <input type="date" id="end" class="form-control"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-4">
+                <button id="create-button" onclick="crearEvento()" class="btn btn-success">Crear</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="text-muted credit">Santiago Benalcázar - Gerardo Llumiquinga</p>
+    </div>
+</div>
+</body>
+</html>
